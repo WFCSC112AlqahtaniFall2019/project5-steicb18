@@ -5,6 +5,14 @@
 
 class Deck {
 
+public:
+    Deck();
+    ~Deck();
+    Deck(const Deck &newDeck);
+    void shuffle();
+    Card removeCard();
+    bool addCard(Card c);
+    void populateDeck();
 private:
     Card* cards;
     int arraySize;
