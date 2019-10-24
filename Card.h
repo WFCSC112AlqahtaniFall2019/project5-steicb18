@@ -9,7 +9,7 @@ const string ranks[] = {"Ace","2","3","4","5","6","7","8","9","10","Jack","King"
 const string suits[] = {"Clubs","Diamonds","Hearts","Spades"};
 
 class Card {
-public:
+public:     //public functions
     Card();
     Card(int RI, int SI);
     string print();
@@ -17,7 +17,7 @@ public:
     bool operator>(Card drawnCard);
 
 
-private:
+private:        //private variables
     int ranksIndex;
     int suitsIndex;
 

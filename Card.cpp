@@ -4,18 +4,18 @@ using namespace std;
 
 
 
-Card::Card(){
+Card::Card(){       //Default constructor for card class
     ranksIndex = 0;
     suitsIndex = 0;
 }
 
-Card::Card(int RI, int SI){
+Card::Card(int RI, int SI){     //Card class constructor
     ranksIndex = RI;
     suitsIndex = SI;
 
 }
 
-bool Card::operator<(Card drawnCard){
+bool Card::operator<(Card drawnCard){       //Overload operator for rank and index comparison
     if(this->ranksIndex < drawnCard.ranksIndex)
         return true;
     else if(this->ranksIndex == drawnCard.ranksIndex){
@@ -32,7 +32,7 @@ bool Card::operator<(Card drawnCard){
 
 }
 
-bool Card::operator>(Card drawnCard){
+bool Card::operator>(Card drawnCard){       //Overload operator for rank and index comparison
     if(this->ranksIndex > drawnCard.ranksIndex)
         return true;
     else if(this->ranksIndex == drawnCard.ranksIndex){
@@ -51,7 +51,6 @@ bool Card::operator>(Card drawnCard){
 
 
 
-string Card::print(){
-    //cout << suitsIndex << endl;
+string Card::print(){       //Print card info
     return ranks[ranksIndex] + " of "+ suits[suitsIndex];
 }

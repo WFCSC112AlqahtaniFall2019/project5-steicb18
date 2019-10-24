@@ -5,7 +5,7 @@
 
 class Deck {
 
-public:
+public:     //public functions
     Deck();
     ~Deck();
     Deck(const Deck &newDeck);
@@ -13,7 +13,9 @@ public:
     Card removeCard();
     bool addCard(Card c);
     void populateDeck();
-private:
+    Deck& operator= (Deck assignment );
+
+private:        //private variables
     Card* cards;
     int arraySize;
     int cardsLeft;
